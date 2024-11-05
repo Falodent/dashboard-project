@@ -10,7 +10,7 @@ const Sidebar = ({ active = "" }) => {
     {
       icon: <DashboardIcon />,
       title: "Dashboard",
-      path: "/",
+      path: "/dashboard",
     },
     {
       icon: <ProfileIcon />,
