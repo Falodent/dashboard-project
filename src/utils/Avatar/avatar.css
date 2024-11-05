@@ -1,0 +1,31 @@
+.avatar{
+    display: flex;
+    flex-direction: row;
+    gap: 56px;
+    align-items: center;
+}
+
+.notification{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+}
+
+.not-btn{
+    width: 140px;
+    height: 54px;
+    background: #75A734;
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 16px;
+    gap: 8px;
+}
+
+.not-btn p{
+    font-weight: 600;
+    font-size: 14px;
+}
