@@ -1,11 +1,14 @@
+/* eslint-disable no-undef */
 import { useState } from "react";
 import FormInput from "../../components/Input/forminput";
 import axios from "axios";
 import { toast } from "react-toastify";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
+import { baseUrl } from "../../config";
 
 const Login = () => {
+
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [username, setUsername] = useState("");
@@ -14,7 +17,7 @@ const Login = () => {
   const handleSubmit = async () => {
     setLoading(true);
     await axios
-      .post("https://dummyjson.com/auth/login", {
+      .post(`${baseUrl}/auth/login`, {
         username,
         password,
       })

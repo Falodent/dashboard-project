@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import { baseUrl } from "../../config";
 
 const Posts = () => {
   //CRUD - CREATE, READ, UPDATE, DELETE
@@ -14,7 +15,7 @@ const Posts = () => {
   const getData = async () => {
     setLoading(true);
     await axios
-      .get("https://dummyjson.com/posts", {
+      .get(`${baseUrl}/posts`, {
         params: {
           limit: 20,
         },
@@ -32,7 +33,7 @@ const Posts = () => {
   const handleDelete = async (id) => {
     toast.info(`Your post with an id of ${id} is being deleted...`);
     await axios
-      .delete(`https://dummyjson.com/posts/${id}`)
+      .delete(`${baseUrl}/posts/${id}`)
       .then(() => {
         toast.success("Post deleted succesfully!");
       })
